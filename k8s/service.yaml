@@ -6,6 +6,6 @@ spec:
   ports:
     - name: app
       port: 80
-      targetPort: 8080
+      targetPort: 8085
   selector:
     app: ex-server
