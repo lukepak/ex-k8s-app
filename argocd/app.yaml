@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/lukpak/ex-k8s-app/
+    repoURL: https://github.com/lukepak/ex-k8s-app/
     targetRevision: HEAD
     path: kubernetes
     directory:
