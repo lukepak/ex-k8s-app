@@ -1,1 +1,20 @@
-
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: echo-server
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/lukpak/ex-k8s-app/
+    targetRevision: HEAD
+    path: kubernetes
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: echo-server
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
